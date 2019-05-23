@@ -1,0 +1,63 @@
+{
+"homeUrl":"https:\/\/www.510360.com\/",
+"enable":true,
+"authorId":"8a86e6b1813b2161553e583153d4d65d",
+"bookDetail":{"forGetMethod":true,
+"parser":{
+"author":["div[@class==infos].a[1]","@regex:作\\s+者： @=>"],
+"bookName":["div[@class=="pic"].h1.text()","@regex: 免费阅读 @=>"],
+"statusText":["div[@class=="infos"].a[2].text()","@dyn:c=ContentFormat.ToSingleText:content;check(c==b, return 连载); return 完本"],
+"coverUrl":"div[@class=="pic"].img.@src",
+"lastUpdateDate":["div[@id==info].p[2].text()","@regex:最后更新： @=>"],
+"typeText":"div[@class==position].a[2].text()",
+"desc":"div[@class==infos].p.text()"
+},
+"params":{}},
+"bookWorld":{"书籍分类":
+{
+"nextPageParams":{},
+"parser":{
+"_1":{"dirURL":"span[@class==s11].a.@href",
+"detailURL":"span[@class==s2].a.@href",
+"lastChapterTitle":"span[@class==s3].a.text()"},
+"author":"span[@class==s5]",
+"bookName":"span[@class==s2].a.text()",
+"_list":"div[@class==l].ul.li"
+},
+"forGetMethod":true,"params":{},
+"urls":[
+{"sex":2,"name":"玄幻小说","url":"https:\/\/www.510360.com\/xuanhuan.html\/"},
+{"sex":2,"name":"修真小说","url":"https:\/\/www.510360.com\/xianxia.html\/"},
+{"sex":2,"name":"都市小说","url":"https:\/\/www.510360.com\/dushi.html\/"},
+{"sex":2,"name":"穿越小说","url":"https:\/\/www.510360.com\/chuanyue.html\/"},
+{"sex":2,"name":"科幻小说","url":"https:\/\/www.510360.com\/kehuan.html\/"},
+{"sex":2,"name":"同人小说","url":"https:\/\/www.510360.com\/tongren.html\/"},
+{"sex":2,"name":"排行榜小说","url":"https:\/\/www.510360.com\/paihangbang.html\/"}
+{"sex":2,"name":"书库小说","url":"https:\/\/www.510360.com\/shuku.html\/"}
+{"sex":2,"name":"完本小说","url":"https:\/\/www.510360.com\/over.html\/"}
+],
+"maxPageCount":"300","nextPageForGetMedthod":true,"nextPageUrl":"div[@class==page_num].a[@class==next].@href"
+}},
+"httpConfigs":{"headers":{},"customFormatValueParam":"JxdSecuritySub.Gb2312Encoded:value","useCookies":true},
+"chapterDetail":{"forGetMethod":true,"parser":{"content":"div[@id==content]"},"params":{}},
+"weight":10,"priorityEncoding":4,"needSupportDynTask":true,
+"sourceDetail":{"forGetMethod":true,"parser":{"_1":{"_list":"div[@id==book_list][1].dd","title":"a.text()","url":"a.@href"}},"params":{}},
+"lastModifyTime":"2019-04-05 16:47:01",
+"responseType":4,
+"searchBook":{
+"nextPageParams":{},
+"parser":{"author":"td[2]",
+"_1":{
+"detailURL":"td[0].a.@href",
+"lastUpdateDate":"td[4]",
+"dirURL":"td[0].a.@href",
+"lastChapterTitle":"td[1]"
+},
+"wordCount":"td[3]",
+"_list":"div[@id==content].tr[!0]",
+"bookName":"td[0].a.text()",
+"statusText":"td[5]",
+"lastUpdateDate":"td[4]"},
+"forGetMethod":false,"params":{"searchkey":"%@"},
+"nextPageForGetMedthod":true,"maxPageCount":"100","url":"https:\/\/www.510360.com\/modules\/article\/search.php","nextPageUrl":"div[@id==pagelink].a[@class==next].@href"}
+,"name":"热血小说网"}
